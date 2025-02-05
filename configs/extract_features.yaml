@@ -1,0 +1,38 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - data: derm7pt
+  - paths: default
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled  
+  
+hydra:  
+  output_subdir: null  
+  run:  
+    dir: .
+
+# pretty print config at the start of the run using Rich library
+print_config: True
+
+seed: 42
+
+debug: False
+
+# --- Compute Configuration --- #
+max_memory: null # {0: "8GiB", "cpu": "24GiB"}
+num_workers: 8
+
+# ----- Model hyperparameters ----- # 
+max_new_tokens: 100
+
+# --- Experiment Configuration --- #
+name: open-flamingo
+n_demos: 0
+bs: 16
+filter: 1.0
+
+# ----- Parameters regarding feature extraction ----- #
+icl_feature_extracting_mode: True
+features: image # choose between image, descriptions, or concepts
+description_model: vila8B

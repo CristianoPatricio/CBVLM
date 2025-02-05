@@ -1,0 +1,31 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - data: derm7pt
+  - paths: default
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled  
+  
+hydra:  
+  output_subdir: null  
+  run:  
+    dir: .
+
+# pretty print config at the start of the run using Rich library
+print_config: True
+
+seed: 42
+
+# --- Compute Configuration --- #
+num_workers: 1
+
+# --- Experiment Configuration --- #
+data: CORDA
+n_demos: 4
+bs: 16
+rices_extractor: biomedclip
+
+# ----- Parameters regarding feature extraction ----- #
+icl_feature_extracting_save_dir: /home/icrto/multimodal-LLM-explainability-dev/data/features
+icl_feature_extracting_mode: True

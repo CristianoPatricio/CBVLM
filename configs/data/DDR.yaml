@@ -1,0 +1,8 @@
+name: DDR
+pathBase: ${paths.data_dir}/Fundus/DDR/DDR_dataset/DDR-dataset/DR_grading/all_images
+train_csv: ${paths.root_dir}/data/splits/DDR_train.csv
+val_csv: ${paths.root_dir}/data/splits/DDR_val.csv
+test_csv: ${paths.root_dir}/data/splits/DDR_test.csv
+clinical_concepts_path: ''
+file_extension: 'jpg'
+num_classes: 5

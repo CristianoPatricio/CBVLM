@@ -1,0 +1,7 @@
+name: fitzpatrick17k
+pathBase: ${paths.data_dir}/Dermatology/SKINCON/fitzpatrick17k/data/finalfitz17k
+train_csv: ${paths.root_dir}/data/splits/SkinCon_train.csv
+val_csv: ${paths.root_dir}/data/splits/SkinCon_val.csv
+test_csv: ${paths.root_dir}/data/splits/SkinCon_test.csv
+file_extension: 'jpg'
+num_classes: 2

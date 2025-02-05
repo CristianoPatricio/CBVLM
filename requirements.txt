@@ -1,0 +1,16 @@
+# --------- hydra --------- #
+hydra-core==1.3.2
+hydra-colorlog==1.2.0
+hydra-optuna-sweeper==1.2.0
+
+# --------- pytorch --------- #
+pytorch_lightning==1.5.1
+
+# --------- others --------- #
+rootutils       # standardizing the project root setup
+pre-commit      # hooks for applying linters on commit
+rich            # beautiful text formatting in terminal
+scikit-learn
+pandas
+openpyxl
+icecream # needed for mPLUG-Owl3

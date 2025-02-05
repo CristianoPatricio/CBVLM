@@ -1,0 +1,38 @@
+# @package _global_
+
+defaults:
+  - _self_
+  - data: DDR
+  - hydra: classification
+  - paths: default
+
+# pretty print config at the start of the run using Rich library
+print_config: True
+
+seed: 42
+
+# setting debug=True limits the evaluation loop to process only 5 examples
+debug: False
+
+# --- Compute Configuration --- #
+max_memory: null # {0: "8GiB", "cpu": "24GiB"}
+max_memory_mistral: null # {0: "7GiB", "cpu": "24GiB"}
+num_workers: 8
+
+# ----- Model hyperparameters ----- #
+max_new_tokens: 20
+mistral_max_new_tokens: 100
+
+# --- Experiment Configuration --- #
+name: open-flamingo
+use_concepts: null # choose from [null, excel_file_with_pred_concepts, automatic]
+intervention_perc: 0 # percentage, e.g. 0.25
+n_demos: 0 # number of class examples in the prompt
+bs: 16
+demo_selection: null # choose between [rices, rices_per_class_global, rices_per_class_max, rices_per_class_mean, mmices, random, random_per_class]
+feature_extractor: null # for RICES and MMICES
+mmices_text_features: null # choose between [descriptions, concepts]
+mmices_K: 100
+mmices_mode: normal # choose between [normal, combined]
+precomputed_file: null # specify this file to avoid runing the LVLM again, i.e. processes the classification answers
+filter: 1.0 # percentage of data for each class to keep

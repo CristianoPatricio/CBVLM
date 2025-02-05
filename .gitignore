@@ -1,0 +1,15 @@
+# Lightning-Hydra-Template
+# Windows
+Thumbs.db
+desktop.ini
+
+# OS X
+.DS_Store
+.Spotlight-V100
+.Trashes
+._*
+
+__pycache__/
+test_demo.py
+flash_attn-2.4.2+cu118torch2.0cxx11abiFALSE-cp310-cp310-linux_x86_64.whl
+/Meta-Llama-3.1-8B-Instruct/
