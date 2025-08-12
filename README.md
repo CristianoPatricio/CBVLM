@@ -100,7 +100,7 @@ mplug
 
 ### 4.1 Extract features
 ```bash
-python extract_features.py data=derm7pt,CORDA,DDR,fitzpatrick name=medimageinsight
+python extract_features.py data=derm7pt,CORDA,DDR,fitzpatrick name=medimageinsight bs=1
 ```
 
 ### 4.2 Concept Detection
