@@ -1,6 +1,6 @@
 from src.data.fitzpatrick17k_dataset import Fitzpatrick_Dataset
 from src.data.derm7pt_dataset import Derm7ptDataset
-from src.data.CORDA_dataset import CORDADataset
+from src.data.CORDA_dataset import CORDADataset, CORDA11Dataset
 from src.data.DDR_dataset import DDRDataset
 from torch.utils.data import Sampler
 
@@ -51,6 +51,10 @@ def get_dataset(cfg):
         """CORDA"""
         dataset_test = CORDADataset(csv_file=cfg.data.test_csv, img_extension=cfg.data.file_extension, path_to_images=cfg.data.pathBase)
         dataset_train = CORDADataset(csv_file=cfg.data.train_csv, img_extension=cfg.data.file_extension, path_to_images=cfg.data.pathBase, filter=cfg.filter)
+    elif (cfg.data.get("name") == 'CORDA_11_concepts'):
+        """CORDA 11 concepts"""
+        dataset_test = CORDA11Dataset(csv_file=cfg.data.test_csv, img_extension=cfg.data.file_extension, path_to_images=cfg.data.pathBase)
+        dataset_train = CORDA11Dataset(csv_file=cfg.data.train_csv, img_extension=cfg.data.file_extension, path_to_images=cfg.data.pathBase, filter=cfg.filter)
     elif (cfg.data.get("name") == 'DDR'):
         """DDR"""
         dataset_test = DDRDataset(csv_file=cfg.data.test_csv, img_extension=cfg.data.file_extension, path_to_images=cfg.data.pathBase)

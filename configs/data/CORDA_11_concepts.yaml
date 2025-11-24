@@ -1,0 +1,8 @@
+name: CORDA_11_concepts
+pathBase: /home/cristiano/datasets/CORDA/224x224
+train_csv: ${paths.root_dir}/data/splits/corda_train_11_concepts.csv
+val_csv: ${paths.root_dir}/data/splits/corda_val_11_concepts.csv
+test_csv: ${paths.root_dir}/data/splits/corda_test_11_concepts.csv
+clinical_concepts_path: ${paths.root_dir}/data/splits/chexpert_labels_corda.csv
+file_extension: 'png'
+num_classes: 2
